@@ -95,13 +95,12 @@
             myHeaders.append("X-API-FOR-CLIENT", "91314");
 
             var requestOptions = {
-                mode: 'no-cors',
                 method: 'GET',
                 headers: myHeaders,
                 redirect: 'follow'
             };
 
-            var apiUrl = 'https://payments.agapay.gives/l2p/services/paymentForm/6BF04022?firstName=' + firstName + '&lastName=' + lastName + '&businessName=TestBusinessName&email=' + email + '&phone=' + phoneNumber + '&referenceId=ABC123&externalId=XYZ456&amount=' + amount;
+            var apiUrl = 'https://payments.agapay.gives/l2p/services/paymentForm/6BF04022?firstName='+firstName+'&lastName='+lastName+'&email='+email+'&phone='+phoneNumber+'&amount='+amount;
 
             fetch(apiUrl, requestOptions)
                 .then(response => {
