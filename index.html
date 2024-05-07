@@ -89,10 +89,10 @@
             const phoneNumber = document.getElementById('phoneNumber').textContent;
 
             var myHeaders = new Headers();
-            myHeaders.append("X-API-LOGIN-ID", "ATG5990");
-            myHeaders.append("X-API-TRANSACTION-KEY", "A092562D437447A6");
-            myHeaders.append("X-API-AUTHENTICATION-METHOD", "KEY");
-            myHeaders.append("X-API-FOR-CLIENT", "91314");
+            myHeaders.append("X-API-LOGIN-ID","ATG5990");
+            myHeaders.append("X-API-TRANSACTION-KEY","A092562D437447A6");
+            myHeaders.append("X-API-AUTHENTICATION-METHOD","KEY");
+            myHeaders.append("X-API-FOR-CLIENT","91314");
 
             var requestOptions = {
                 method: 'GET',
@@ -100,7 +100,7 @@
                 redirect: 'follow'
             };
 
-            var apiUrl = 'https://payments.agapay.gives/l2p/services/paymentForm/6BF04022?firstName='+firstName+'&lastName='+lastName+'&email='+email+'&phone='+phoneNumber+'&amount='+amount;
+            var apiUrl = 'https://payments.agapay.gives/l2p/services/paymentForm/6BF04022?firstName='+firstName+'&externalId=510200010212&lastName='+lastName+'&email='+email+'&phone='+phoneNumber+'&amount='+amount;
 
             fetch(apiUrl, requestOptions)
                 .then(response => {
