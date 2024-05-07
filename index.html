@@ -99,8 +99,7 @@
                 redirect: 'follow'
             };
 
-            var apiUrl = 'https://payments.agapay.gives/l2p/services/paymentForm/6BF04022?firstName='+firstName+'&externalId=510200010212&lastName='+lastName+'&email='+email+'&phone='+phoneNumber+'&amount='+amount;
-
+           var apiUrl = 'https://cors-anywhere.herokuapp.com/https://payments.agapay.gives/l2p/services/paymentForm/6BF04022?firstName='+firstName+'&externalId=510200010212&lastName='+lastName+'&email='+email+'&phone='+phoneNumber+'&amount='+amount;
             fetch(apiUrl, requestOptions)
                 .then(response => {
                     if (!response.ok) {
